@@ -1,0 +1,74 @@
+{
+    "name": "RnRInputActions",
+    "maps": [
+        {
+            "name": "Player",
+            "id": "d07fe628-91fb-4314-ace4-3346300a4bc4",
+            "actions": [
+                {
+                    "name": "Orbit",
+                    "type": "PassThrough",
+                    "id": "2a2c6616-d525-479b-8a0b-d20f3575bb5b",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Zoom",
+                    "type": "PassThrough",
+                    "id": "c845d7a4-a892-4272-a155-a604826ade47",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "Click And Drag Binding",
+                    "id": "7a3da919-31fc-47d9-8553-cac624ce678f",
+                    "path": "ClickAndDragBinding",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Orbit",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "MouseButton",
+                    "id": "4d03bee3-7b54-465b-b4ef-f061c34fddbe",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Orbit",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "MouseVector",
+                    "id": "ebf3d14f-c704-47e3-96cd-b79105594ff7",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Orbit",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "ca45300e-c4a7-49c1-a569-e645fc5cd8f1",
+                    "path": "<Mouse>/scroll",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Zoom",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
