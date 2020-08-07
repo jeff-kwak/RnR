@@ -1,30 +1,27 @@
-﻿using Cinemachine;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.InputSystem;
 
+[RequireComponent(typeof(CinemachineFreeLookChangeAxis))]
 [RequireComponent(typeof(CinemachineFreeLookZoom))]
 public class PlayerController : MonoBehaviour
 {
-  public CinemachineFreeLook FreeLookCamera;
   public float ZoomStep = 0.1f;
 
   private CinemachineFreeLookZoom zoom;
+  private CinemachineFreeLookChangeAxis axis;
+  private EventBus bus;
 
   void Start()
   {
     zoom = GetComponent<CinemachineFreeLookZoom>();
-  }
-
-  void Update()
-  {
-    
+    axis = GetComponent<CinemachineFreeLookChangeAxis>();
+    bus = FindObjectOfType<EventBus>();
   }
 
   public void OnOrbit(InputValue value)
   {
     var inputVector = value.Get<Vector2>();
-    FreeLookCamera.m_XAxis.m_InputAxisValue = inputVector.x;
-    FreeLookCamera.m_YAxis.m_InputAxisValue = inputVector.y;
+    axis.SetCameraAxis(inputVector.x, inputVector.y);
   }
 
   

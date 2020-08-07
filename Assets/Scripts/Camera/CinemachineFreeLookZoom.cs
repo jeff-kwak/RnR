@@ -22,8 +22,6 @@ class CinemachineFreeLookZoom : MonoBehaviour
   [Tooltip("The camera speed for acheiving the zoom in units per second")]
   public float CameraSpeed = 2f;
 
-  public bool IsUpdateCalled = false;
-
   void Start()
   {
     cam = GetComponentInChildren<CinemachineFreeLook>();
