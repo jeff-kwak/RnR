@@ -15,4 +15,9 @@ public class UserInterfaceDriver : MonoBehaviour
   {
     bus.FireScramblePuzzle();
   }
+
+  public void ResetPuzzle()
+  {
+    bus.FireResetPuzzle();
+  }
 }
